@@ -60,7 +60,7 @@ class record{
     T& get(size_t i){
         if (i>=sizeof...(Types)) throw std::out_of_range("overstep the boundary");
         if (!is_type_at<T>[i]) throw std::runtime_error("type error");
-        return *static_cast<T*>(array[i]);;
+        return *static_cast<T*>(array[i]);
     };
     size_t size() const{
         return sizeof...(Types);
